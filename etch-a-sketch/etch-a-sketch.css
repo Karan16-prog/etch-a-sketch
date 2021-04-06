@@ -1,22 +1,41 @@
 :root{
-  --grid-cols : 1;
-  --grid-rows : 1;
+  --grid-cols : 16;
+  --grid-rows : 16;
 }
 body{
   overflow: hidden;
 }
 
-#container{
+.container2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  position: relative;
+}
+
+.container{
   display: grid;
   height:400px;
   width: 400px;
+  position: absolute;
   grid-template-rows: repeat(var(--grid-rows), 1fr);
   grid-template-columns: repeat(var(--grid-rows), 1fr);
-  margin: auto;
-  transform: translateY(40%);
+  justify-content: center;
+  align-content: center;
+  z-index: 1;
+}
+
+#wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+
 }
 
 .grid-item{
   padding: 1px;
   border: 1px solid red;
+
 }
